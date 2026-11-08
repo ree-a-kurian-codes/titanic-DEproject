@@ -1,0 +1,32 @@
+
+# Titanic dataset (do not upload to GitHub)
+src/data/*
+!src/data/.gitkeep
+
+# macOS files
+.DS_Store
+.AppleDouble
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# R temporary files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Generated prediction files
+predictions/
+  
