@@ -33,7 +33,7 @@ print(names(train_data))
 cat("\nQuestion 23 completed successfully!\n")
 
 
-# Question 24 - Step 1: Explore and prepare the data
+# Question 24 - Explore and prepare the data
 
 cat("\n=== Explore and Prepare Training Data ===\n")
 
@@ -74,7 +74,7 @@ print(head(model_data, 5))
 cat("\nData exploration and preprocessing completed!\n")
 
 
-# Question 24 - Step 2: Build Logistic Regression Model
+# Question 24 - Build Logistic Regression Model
 
 cat("\n=== Build Logistic Regression Model ===\n")
 
@@ -108,7 +108,7 @@ print(head(train_predictions, 10))
 cat("\nLogistic regression modeling completed!\n")
 
 
-# Question 24 - Step 3: Measure Training Accuracy
+# Question 24 - Measure Training Accuracy
 
 cat("\n=== Training Model Accuracy ===\n")
 
@@ -139,7 +139,7 @@ cat(
 cat("\nTraining accuracy evaluation completed!\n")
 
 
-# Question 24 - Step 4: Predict on the Test Dataset
+# Question 24 - Predict on the Test Dataset
 
 cat("\n=== Predict Survival on Test Dataset ===\n")
 
@@ -201,7 +201,7 @@ cat("Total test passengers predicted:", nrow(results), "\n")
 cat("\nTest dataset prediction completed!\n")
 
 
-# Question 24 - Step 5: Evaluate Model on Held-Out Data
+# Question 24 - Evaluate Model on Held-Out Data
 
 cat("\n=== Held-Out Model Evaluation ===\n")
 
@@ -301,7 +301,7 @@ cat(
 cat("\nHeld-out model evaluation completed!\n")
 
 
-# Question 24 - Step 6: Final Summary
+# Question 24 - Final Summary
 
 cat("\n========================================\n")
 cat("TITANIC R MODEL - FINAL SUMMARY\n")

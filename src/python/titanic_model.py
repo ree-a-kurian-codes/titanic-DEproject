@@ -59,8 +59,6 @@ def main():
     print("Parch: Number of parents/children aboard")
     print("Fare: Passenger ticket fare")
 
-
-    
     # Fill missing numerical values with the median
     age_median = X["Age"].median()
     fare_median = X["Fare"].median()
@@ -78,8 +76,6 @@ def main():
     print("female = 1")
 
     X["Sex"] = X["Sex"].map({"male": 0, "female": 1})
-
-
     
 
     print("\nMissing values after preprocessing:")
@@ -130,51 +126,6 @@ def main():
     print(f"Correct predictions: {correct_predictions}")
     print(f"Total passengers: {len(y)}")
 
-
-    # Question 17: Load test.csv and predict survival
-
-    print("\n=== Question 17: Test Dataset Predictions ===")
-
-    # Locate and load the test dataset
-    test_path = Path(__file__).resolve().parent.parent / "data" / "test.csv"
-    test_data = pd.read_csv(test_path)
-
-    print("\nTest dataset loaded successfully!")
-    print(f"Test dataset shape: {test_data.shape}")
-
-    # Select the same features used for training
-    X_test = test_data[features].copy()
-
-    # Fill missing numerical values using training medians
-    X_test["Age"] = X_test["Age"].fillna(train_data["Age"].median())
-    X_test["Fare"] = X_test["Fare"].fillna(train_data["Fare"].median())
-
-    # Convert passenger sex into numbers
-    X_test["Sex"] = X_test["Sex"].map({"male": 0, "female": 1})
-
-    print("\nMissing values after test preprocessing:")
-    print(X_test.isnull().sum())
-
-    # Predict survival using the trained model
-    test_predictions = model.predict(X_test)
-
-    print("\nFirst 10 test survival predictions:")
-    print(test_predictions[:10])
-
-    # Save predictions to a CSV file
-    predictions_folder = Path(__file__).resolve().parent.parent.parent / "predictions"
-    predictions_folder.mkdir(exist_ok=True)
-
-    submission = pd.DataFrame({
-        "PassengerId": test_data["PassengerId"],
-        "Survived": test_predictions
-    })
-
-    output_path = predictions_folder / "titanic_predictions.csv"
-    submission.to_csv(output_path, index=False)
-
-    print(f"\nPredictions saved to: {output_path}")
-    print(f"Total test predictions: {len(test_predictions)}")
 
     # Question 17: Load test.csv and predict survival
 
@@ -283,11 +234,6 @@ def main():
 
     print("\nModel execution completed successfully!")
     print("=" * 50)
-
-
-
-
-
 
 
 if __name__ == "__main__":
