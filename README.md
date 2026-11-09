@@ -28,7 +28,7 @@ Make sure Docker Desktop is open and running before building the containers. You
 
 Open Terminal and run:
 
-git clone git clone https://github.com/ree-a-kurian-codes/titanic-DEproject.git
+git clone https://github.com/ree-a-kurian-codes/titanic-DEproject.git
 cd titanic-DEproject
 
 **Important:** 
